@@ -1,7 +1,0 @@
-class Screen
-  attr_accessor :share
-  
-  def initialize
-    @broadcast=false
-  end
-end

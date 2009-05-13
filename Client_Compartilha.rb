@@ -13,7 +13,7 @@ sock.bind(Socket::INADDR_ANY, PORT)
 loop do
   msg, info = sock.recvfrom(1024)
   if msg == 'yes'
-    x = Thread.new {`xtightvncviewer -fullscreen -viewonly 192.168.1.72`}  
+    x = Thread.new {`xtightvncviewer -fullscreen -viewonly #{info[2]}`}  
     #puts 'compartilhando'
   else
     #Thread.kill x
