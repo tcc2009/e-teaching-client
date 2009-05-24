@@ -1,2 +1,4 @@
 The e-teaching client is a software which is useful for computer labs. This software works with another one (e-teaching - the server) to help 
 teachers controls and share data with your students. In fact, the e-teaching client should be installed into a student pc.
+
+You need to have rmagick installed in your kids pc's!
