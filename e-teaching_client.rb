@@ -23,13 +23,14 @@ loop do
       Thread.kill t_share
     when 'thumb'
       t_thumb = Thread.new do
-      loop do
-        #captura imagem do display 0! 
-        picture = Magick::Image.capture(silent=true){ self.filename = "root" }
-        #Redimensiona para 400x300
-        picture.crop_resized!($PIXELS_X, $PIXELS_Y, Magick::ForgetGravity)
-        picture.write("/tmp/#{$HOSTNAME}.png")
-        sleep 5      
+      	loop do
+          #captura imagem do display 0! 
+          picture = Magick::Image.capture(silent=true){ self.filename = "root" }
+          #Redimensiona para 400x300
+          picture.crop_resized!($PIXELS_X, $PIXELS_Y, Magick::ForgetGravity)
+          picture.write("/tmp/#{$HOSTNAME}.png")
+          sleep 5      
+        end
       end
     when 'list'
       Thread.kill t_thumb
